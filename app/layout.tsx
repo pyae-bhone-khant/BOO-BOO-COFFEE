@@ -1,17 +1,15 @@
+// app/layout.tsx (or pages/_app.tsx if using pages directory)
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { UsersRound } from 'lucide-react';
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Import Poppins font
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["100","200","300","400","500","600","700","800","900"], // optional all weights
 });
 
 export const metadata: Metadata = {
@@ -26,23 +24,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > 
-      <div className="flex flex-col  items-center mt-14 justify-center">
-      <h1 className="text-6xl   font-mono ">BOO BOO</h1>
-      <div>
-             <nav className="flex mt-15  font-mono gap-20 text-xl ">
-            <a href="">Home </a>
+      <body className={`${poppins.variable} antialiased`}>
+        <div className="flex flex-col items-center mt-14 justify-center">
+          {/* Heading */}
+          <h1 className="text-6xl" style={{ fontFamily: 'var(--font-poppins)' }}>
+            BOO BOO
+          </h1>
+
+          {/* Navigation */}
+          <nav className="flex mt-6 gap-20 text-xl" style={{ fontFamily: 'var(--font-poppins)' }}>
+            <a href="">Home</a>
             <a href="">Our Story</a>
             <a href="">Menu</a>
             <a href="">Activities</a>
-             <UsersRound />
-             </nav>
-      </div>
-    
-        {children}
-    </div>
+            <UsersRound />
+          </nav>
+
+          {/* Children content */}
+          <div className="mt-10">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
