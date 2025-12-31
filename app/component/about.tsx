@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
-
 export default function About() {
     return (
         <div className="mt-30 mb-2 flex flex-col justify-center items-center text-center">
@@ -41,10 +39,7 @@ export default function About() {
                      <br />Desserts.
                 </p>
                 </div>
-                <Image width={450} height={200} className="rounded-tl-full  " src="/img/photo/photo2.avif" alt="dd" />
-                
-
-                
+                <Image width={450} height={200} className="rounded-tl-full  " src="/img/photo/photo2.avif" alt="dd" />                
             </div>
 
         </div>
