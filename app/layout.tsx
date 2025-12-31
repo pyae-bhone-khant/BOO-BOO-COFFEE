@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { UsersRound } from 'lucide-react';
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,8 +28,21 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      > 
+      <div className="flex flex-col  items-center mt-14 justify-center">
+      <h1 className="text-6xl   font-mono ">BOO BOO</h1>
+      <div>
+             <nav className="flex mt-15  font-mono gap-20 text-xl ">
+            <a href="">Home </a>
+            <a href="">Our Story</a>
+            <a href="">Menu</a>
+            <a href="">Activities</a>
+             <UsersRound />
+             </nav>
+      </div>
+    
         {children}
+    </div>
       </body>
     </html>
   );
