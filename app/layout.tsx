@@ -32,7 +32,7 @@ export default function RootLayout({
           </h1>
 
           {/* Navigation */}
-          <nav className="flex mt-6 gap-20 text-xl" style={{ fontFamily: 'var(--font-poppins)' }}>
+          <nav className="flex mt-10 gap-20 text-xl" style={{ fontFamily: 'var(--font-poppins)' }}>
             <a href="">Home</a>
             <a href="">Our Story</a>
             <a href="">Menu</a>
