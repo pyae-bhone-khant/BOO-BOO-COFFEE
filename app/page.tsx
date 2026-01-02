@@ -9,7 +9,7 @@ export default function Home() {
          <Imgaes />
          <About />
          <Shops />
-         <Footer />
+        
     </div>
       
     

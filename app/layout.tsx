@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { UsersRound } from 'lucide-react';
 
 import "./globals.css";
+import Footer from "./component/footer";
 
 // Import Poppins font
 const poppins = Poppins({
@@ -43,6 +44,7 @@ export default function RootLayout({
           {/* Children content */}
           <div className="mt-10">
             {children}
+            <Footer />
           </div>
         </div>
       </body>
